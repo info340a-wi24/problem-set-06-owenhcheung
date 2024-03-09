@@ -5,12 +5,12 @@ import { getIncompleteTasks } from './Model.js';
 function renderSingleTask(task, markCompleteCallback) {
     const listItem = document.createElement('li');
     listItem.classList.add('list-group-item');
-    
+  
     const button = document.createElement('button');
     button.classList.add('btn', 'btn-sm', 'btn-warning');
     button.innerHTML = '<span class="material-icons-outlined">done</span>';
     button.addEventListener('click', () => markCompleteCallback(task));
-    
+  
     listItem.appendChild(button);
     listItem.appendChild(document.createTextNode(' ' + task.description));
 
